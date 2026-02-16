@@ -26,16 +26,16 @@ void	handle_sorting(t_stack **a, t_stack **b)
 {
 	int	size;
 
-	if (size <= 1 || is_sorted(a))
+	if (size <= 1 || is_sorted(*a))
 		return ;
 	else if (size == 2)
-		sort_two(&a);
+		sort_two(a);
 	else if (size == 3)
-		sort_three(&a);
+		sort_three(a);
 	else if (size <= 5)
-		sort_five(&a, &b);
+		sort_five(a, b);
 	else
-		radix_sort(&a, &b);
+		radix_sort(a, b);
 }
 
 int	main(int argc, char **argv)

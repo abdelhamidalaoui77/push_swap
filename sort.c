@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 19:37:24 by alamrani          #+#    #+#             */
-/*   Updated: 2026/02/16 17:41:30 by alamrani         ###   ########.fr       */
+/*   Updated: 2026/02/16 17:59:06 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,21 @@ void	sort_three(t_stack **stack)
 	}
 	else if (first < second && second > third && first > third)
 		rra(stack);
+}
+
+int	get_min_position(t_stack *a)
+{
+	int	pos;
+
+	pos = 0;
+	while (a)
+	{
+		if (a->index == 0)
+			return (pos);
+		a = a->next;
+		pos++;
+	}
+	return (-1);
 }
 
 void	push_smallest_to_b(t_stack **a, t_stack **b)

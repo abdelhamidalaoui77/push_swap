@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 17:25:09 by alamrani          #+#    #+#             */
-/*   Updated: 2026/02/14 23:34:28 by alamrani         ###   ########.fr       */
+/*   Updated: 2026/02/16 17:59:30 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,11 @@ void	rra(t_stack **a);
 void	rrb(t_stack **b);
 void	rrr(t_stack **a, t_stack **b);
 
+/* SORTING*/
+t_stack	*find_min_unindexed(t_stack *stack);
+int		get_max_bits(t_stack *a);
+void	sort_two(t_stack **stack);
+void	sort_three(t_stack **stack);
+void	sort_five(t_stack **a, t_stack **b);
+void	radix_sort(t_stack **a, t_stack **b);
 #endif
