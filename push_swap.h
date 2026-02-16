@@ -40,7 +40,7 @@ int		ft_strlen(char *str);
 /* Handling parsing  Memory Leaks */
 void	free_array_arguements(char **nbrs);
 
-/* STACK OPERATIONS */
+/* STACK*/
 t_stack	*push_one(int value);
 int		fill_stack(t_stack **stack, int value);
 void	stack_add_back(t_stack **stack, t_stack *new);
@@ -50,4 +50,25 @@ void	free_stack(t_stack **stack);
 int		stack_size(t_stack *stack);
 int		is_sorted(t_stack *stack);
 void	index_stack(t_stack *stack);
+
+/* OPERATIONS */
+// swap
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
+
+// push
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
+
+// rotate
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rr(t_stack **a, t_stack **b);
+
+// reverse rotate
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void	rrr(t_stack **a, t_stack **b);
+
 #endif

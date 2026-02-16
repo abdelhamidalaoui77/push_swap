@@ -22,6 +22,22 @@ void	print_values(t_stack	*stack)
 	printf("\n");
 }
 
+void	handle_sorting(t_stack **a, t_stack **b)
+{
+	int	size;
+
+	if (size <= 1 || is_sorted(a))
+		return ;
+	else if (size == 2)
+		sort_two(&a);
+	else if (size == 3)
+		sort_three(&a);
+	else if (size <= 5)
+		sort_five(&a, &b);
+	else
+		radix_sort(&a, &b);
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -41,7 +57,7 @@ int	main(int argc, char **argv)
 		free_stack(&a);
 		return (0);
 	}
-	print_values(a);
+	handle_sorting(&a, &b);
 	free_stack(&a);
 	return (0);
 }
