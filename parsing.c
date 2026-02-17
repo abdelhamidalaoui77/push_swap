@@ -80,6 +80,7 @@ int	parse_and_push(t_stack **stack, int ac, char **av)
 	int		size;
 	int		error;
 
+	error = 0;
 	nbrs = handle_arguments(ac, av);
 	if (!nbrs)
 		return (-1);

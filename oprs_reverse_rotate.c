@@ -28,6 +28,7 @@ void	reverse_rotate(t_stack **stack)
 	}
 	previous->next = NULL;
 	last->next = *stack;
+	*stack = last;
 }
 
 void	rra(t_stack **a)
