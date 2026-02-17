@@ -76,6 +76,6 @@ t_stack	*find_min_unindexed(t_stack *stack);
 int		get_max_bits(t_stack *a);
 void	sort_two(t_stack **stack);
 void	sort_three(t_stack **stack);
-void	sort_five(t_stack **a, t_stack **b);
+void	sort_five(t_stack **a, t_stack **b, int size);
 void	radix_sort(t_stack **a, t_stack **b);
 #endif

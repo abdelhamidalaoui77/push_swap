@@ -65,7 +65,6 @@ char	**handle_arguments(int ac, char **av)
 	str = ft_strjoin(ac, av, " ");
 	if (!str)
 		return (NULL);
-	printf("JOINED: [%s]\n", str);
 	nbrs = ft_split(str, ' ');
 	free(str);
 	if (!nbrs || !nbrs[0])

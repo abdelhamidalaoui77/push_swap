@@ -16,7 +16,6 @@ void	print_values(t_stack	*stack)
 {
 	while (stack)
 	{
-		printf(" %d ", stack->value);
 		stack = stack->next;
 	}
 	printf("\n");
@@ -31,7 +30,7 @@ void	handle_sorting(t_stack **a, t_stack **b, int size)
 	else if (size == 3)
 		sort_three(a);
 	else if (size <= 5)
-		sort_five(a, b);
+		sort_five(a, b, size);
 	else
 		radix_sort(a, b);
 }
@@ -59,9 +58,6 @@ int	main(int argc, char **argv)
 	index_stack(a);
 	size = stack_size(a);
 	handle_sorting(&a, &b, size);
-	print_values(a);
-	if (is_sorted(a))
-		write(1, "sorted\n", 7);
 	free_stack(&a);
 	return (0);
 }
