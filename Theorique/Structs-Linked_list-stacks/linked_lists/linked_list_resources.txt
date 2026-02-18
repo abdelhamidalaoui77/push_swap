@@ -1,9 +1,0 @@
-Programmiz:
-https://www.programiz.com/dsa/linked-list
-
-learn-c.org
-https://www.learn-c.org/en/Linked_lists
-
-geeks:
-https://www.geeksforgeeks.org/c/linked-list-in-c/
-https://www.geeksforgeeks.org/dsa/linked-list-data-structure/
