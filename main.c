@@ -16,6 +16,7 @@ void	print_values(t_stack	*stack)
 {
 	while (stack)
 	{
+		printf("%d\n", stack->value);
 		stack = stack->next;
 	}
 	printf("\n");
@@ -35,6 +36,26 @@ void	handle_sorting(t_stack **a, t_stack **b, int size)
 		radix_sort(a, b);
 }
 
+int	is_empty(char **av)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j] == ' ' || (av[i][j] >= 9 && av[i][j] <= 13))
+		{
+			j++;
+		}
+		if (av[i][j] == '\0')
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -45,7 +66,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc < 2)
 		return (0);
-	if (parse_and_push(&a, argc - 1, argv + 1) == -1)
+	if (parse_and_push(&a, argc - 1, argv + 1) == -1 || is_empty(argv + 1))
 	{
 		write(2, "Error\n", 6);
 		return (1);
