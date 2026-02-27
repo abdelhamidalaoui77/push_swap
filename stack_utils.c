@@ -38,7 +38,7 @@ int	is_sorted(t_stack *stack)
 	return (1);
 }
 
-t_stack	*find_min_unindexed(t_stack *stack)
+static t_stack	*find_min_unindexed(t_stack *stack)
 {
 	t_stack	*min;
 
@@ -55,7 +55,7 @@ t_stack	*find_min_unindexed(t_stack *stack)
 	return (min);
 }
 
-int	has_unindexed(t_stack *stack)
+static int	has_unindexed(t_stack *stack)
 {
 	while (stack)
 	{

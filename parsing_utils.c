@@ -12,12 +12,12 @@
 
 #include "push_swap.h"
 
-int	ft_isdigit(char c)
+static int	ft_isdigit(char c)
 {
 	return (c >= '0' && c <= '9');
 }
 
-int	atoi_check_sign(const char *str, int *sign)
+static int	atoi_check_sign(const char *str, int *sign)
 {
 	*sign = 1;
 	if (*str == '+' || *str == '-')

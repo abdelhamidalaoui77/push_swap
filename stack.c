@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_stack	*push_one(int value)
+static t_stack	*push_one(int value)
 {
 	t_stack	*node;
 
@@ -25,7 +25,7 @@ t_stack	*push_one(int value)
 	return (node);
 }
 
-void	stack_add_back(t_stack **stack, t_stack *new)
+static void	stack_add_back(t_stack **stack, t_stack *new)
 {
 	t_stack	*tmp;
 

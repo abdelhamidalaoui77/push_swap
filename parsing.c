@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	duplicate_check(int *arr, int size)
+static int	duplicate_check(int *arr, int size)
 {
 	int	i;
 	int	j;
@@ -44,7 +44,7 @@ void	free_array_arguements(char **nbrs)
 	free(nbrs);
 }
 
-int	insert_to_stack_after_parsing(t_stack **stack, int *arr, int size)
+static int	insert_to_stack_after_parsing(t_stack **stack, int *arr, int size)
 {
 	int	i;
 
@@ -58,7 +58,7 @@ int	insert_to_stack_after_parsing(t_stack **stack, int *arr, int size)
 	return (1);
 }
 
-int	verify_inputs(char **nbrs, int *arr, int *error, int size)
+static int	verify_inputs(char **nbrs, int *arr, int *error, int size)
 {
 	int	i;
 

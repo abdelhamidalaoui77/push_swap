@@ -45,7 +45,7 @@ void	sort_three(t_stack **stack)
 		rra(stack);
 }
 
-int	get_min_position(t_stack *a)
+static int	get_min_position(t_stack *a)
 {
 	int	min;
 	int	pos;
@@ -69,7 +69,7 @@ int	get_min_position(t_stack *a)
 	return (min_pos);
 }
 
-void	push_smallest_to_b(t_stack **a, t_stack **b)
+static void	push_smallest_to_b(t_stack **a, t_stack **b)
 {
 	int	pos;
 	int	size;

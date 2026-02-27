@@ -6,23 +6,13 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 18:41:52 by alamrani          #+#    #+#             */
-/*   Updated: 2026/02/14 22:31:40 by alamrani         ###   ########.fr       */
+/*   Updated: 2026/02/22 14:55:35 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_values(t_stack	*stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
-}
-
-void	handle_sorting(t_stack **a, t_stack **b, int size)
+static void	handle_sorting(t_stack **a, t_stack **b, int size)
 {
 	if (size <= 1 || is_sorted(*a))
 		return ;
@@ -36,7 +26,7 @@ void	handle_sorting(t_stack **a, t_stack **b, int size)
 		radix_sort(a, b);
 }
 
-int	is_empty(char **av)
+static int	is_empty(char **av)
 {
 	int	i;
 	int	j;
@@ -66,7 +56,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc < 2)
 		return (0);
-	if (parse_and_push(&a, argc - 1, argv + 1) == -1 || is_empty(argv + 1))
+	if (is_empty(argv + 1) || parse_and_push(&a, argc - 1, argv + 1) == -1)
 	{
 		write(2, "Error\n", 6);
 		return (1);
